@@ -1,0 +1,8 @@
+.footer {
+  box-sizing: border-box;
+  height: 9vh;
+  padding: 10px 0;
+  text-align: center;
+  color: #d7d7d7;
+  line-height: 9vh;
+}

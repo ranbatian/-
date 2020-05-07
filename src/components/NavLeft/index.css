@@ -1,0 +1,27 @@
+.logo {
+  background-color: #002140;
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.logo .logo-contnet {
+  justify-content: center ;
+  align-items: center;
+  display: flex;
+}
+.logo img {
+  height: 45px;
+  width: 45px;
+  padding: 10px ;
+  line-height: 60px;
+}
+.logo h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 0 0 5px;
+  line-height: 60px;
+}
+.main-nav {
+  width: 100% !important;
+}
