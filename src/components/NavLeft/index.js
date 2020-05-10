@@ -3,6 +3,7 @@ import './index.css'
 import { Menu } from 'antd';
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 import MenuData from '../../config/Menuconfig'
+import { NavLink } from 'react-router-dom'
 
 const { SubMenu } = Menu;
 
@@ -27,7 +28,9 @@ class Nav extends Component {
                 )
             }
             return (
-                <Menu.Item key={item.key} title={item.title}>{item.title}</Menu.Item>
+                <Menu.Item key={item.key} title={item.title}>
+                    <NavLink to={`/admin${item.key}`}>{item.title}</NavLink>
+                </Menu.Item>
             )
         })
     }
@@ -35,10 +38,8 @@ class Nav extends Component {
         return (
             <div>
                 <div className='logo'>
-                    <div className=''>
                         <img src={`assets/logo-ant.svg`} alt="main-logo" />
                         <h1>Ran MS</h1>
-                    </div>
                 </div>
                 <Menu style={{ width: 256 }} mode="vertical" theme='dark' className='main-nav'>
                     {this.state.menuNodeTree}

@@ -4,7 +4,6 @@ import 'antd/dist/antd.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import NavLeft from './components/NavLeft'
-import Home from "./page/home";
 import './style/common.less'
 
 class admin extends Component {
@@ -21,7 +20,7 @@ class admin extends Component {
                 <Col span='20' className='main'>
                     <Header />
                     <Row className='content'>
-                        <Home />
+                        {this.props.children}
                     </Row>
                     <Footer />
                 </Col>
