@@ -10,6 +10,7 @@ import Modal from './page/ui/modal/index'
 import Loadings from './page/ui/spin/index'
 import Notification from './page/ui/notification/index'
 import Message from './page/ui/message/index'
+import Tabs from './page/ui/tabs/index'
 
 
 
@@ -32,6 +33,7 @@ class router extends Component {
                                 <Route path='/admin/ui/loadings' component={Loadings} />
                                 <Route path='/admin/ui/notification' component={Notification} />
                                 <Route path='/admin/ui/messages' component={Message} />
+                                <Route path='/admin/ui/tabs' component={Tabs} />
                                 <Route component={NoMatch} />
                             </Switch>
                         </Admin>

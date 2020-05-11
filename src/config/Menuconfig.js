@@ -32,10 +32,6 @@ const menuList = [
                 key: '/ui/tabs',
             },
             {
-                title: '图片画廊',
-                key: '/ui/gallery',
-            },
-            {
                 title: '轮播图',
                 key: '/ui/carousel',
             }
