@@ -11,6 +11,9 @@ import Loadings from './page/ui/spin/index'
 import Notification from './page/ui/notification/index'
 import Message from './page/ui/message/index'
 import Tabs from './page/ui/tabs/index'
+import Carousel from './page/ui/carousel/index'
+import LoginFrom from './page/from/loginFrom/index'
+import RegisterFrom from './page/from/registerFrom/index'
 
 
 
@@ -34,6 +37,9 @@ class router extends Component {
                                 <Route path='/admin/ui/notification' component={Notification} />
                                 <Route path='/admin/ui/messages' component={Message} />
                                 <Route path='/admin/ui/tabs' component={Tabs} />
+                                <Route path='/admin/ui/carousel' component={Carousel} />
+                                <Route path='/admin/form/login' component={LoginFrom} />
+                                <Route path='/admin/form/reg' component={RegisterFrom} />
                                 <Route component={NoMatch} />
                             </Switch>
                         </Admin>
