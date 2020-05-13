@@ -1,0 +1,23 @@
+{
+    "result":{
+      "page":1,
+      "page_size":10,
+      "total_count":60,
+      "page_count":10,
+      "item-list|10":[{
+        "id|+1":1,
+        "name":"@city",
+       " modal|1-2":1,
+        "op_mode|1-2":1,
+        "franchisee_id":77,
+        "franchisee_name":"松鼠自营",
+        "city_admins|1-2":[{
+          "userName":"@cname",
+          "user_id|+1":10001
+        }],
+        "open_item":"@datetime",
+        "sys_user_name":"@cname",
+        "updata_time":13455635
+      }]
+    }
+  }

@@ -14,6 +14,8 @@ import Tabs from './page/ui/tabs/index'
 import Carousel from './page/ui/carousel/index'
 import LoginFrom from './page/from/loginFrom/index'
 import RegisterFrom from './page/from/registerFrom/index'
+import City from './page/city/index'
+import BasicForm from './page/table/basicTable'
 
 
 
@@ -40,6 +42,8 @@ class router extends Component {
                                 <Route path='/admin/ui/carousel' component={Carousel} />
                                 <Route path='/admin/form/login' component={LoginFrom} />
                                 <Route path='/admin/form/reg' component={RegisterFrom} />
+                                <Route path='/admin/table/basic' component={BasicForm} />
+                                <Route path='/admin/city' component={City} />
                                 <Route component={NoMatch} />
                             </Switch>
                         </Admin>
