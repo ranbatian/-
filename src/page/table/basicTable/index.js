@@ -26,13 +26,13 @@ class BasicTable extends Component {
         this.request()
     }
     onRowClickCheck = (record, index) => {
-        let  selectedCheckRowKeys  = this.state.selectedCheckRowKeys || []
-        let CheckRowitem=this.state.selectedCheckRowitem|| []
-        selectedCheckRowKeys.push(index+1)
+        let selectedCheckRowKeys = this.state.selectedCheckRowKeys || []
+        let CheckRowitem = this.state.selectedCheckRowitem || []
+        selectedCheckRowKeys.push(index + 1)
         CheckRowitem.push(record)
         this.setState({
             selectedCheckRowKeys,
-            selectedCheckRowitem:CheckRowitem
+            selectedCheckRowitem: CheckRowitem
         })
     }
     //! 声明周期函数，数据初始化
@@ -91,7 +91,7 @@ class BasicTable extends Component {
         }).then(res => {
             this.setState({
                 dataSource2: res,
-                selectedCheckRowKeys:[]
+                selectedCheckRowKeys: []
             })
         })
     }

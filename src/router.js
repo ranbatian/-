@@ -3,19 +3,21 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import App from './App'
 import Login from './page/login'
 import Admin from './admin'
-import NoMatch from './page/noMatch/index'
-import Home from './page/home/index'
-import ButtonUi from './page/ui/buttons/index'
-import Modal from './page/ui/modal/index'
-import Loadings from './page/ui/spin/index'
-import Notification from './page/ui/notification/index'
-import Message from './page/ui/message/index'
-import Tabs from './page/ui/tabs/index'
-import Carousel from './page/ui/carousel/index'
-import LoginFrom from './page/from/loginFrom/index'
-import RegisterFrom from './page/from/registerFrom/index'
-import City from './page/city/index'
+import NoMatch from './page/noMatch'
+import Home from './page/home'
+import ButtonUi from './page/ui/buttons'
+import Modal from './page/ui/modal'
+import Loadings from './page/ui/spin'
+import Notification from './page/ui/notification'
+import Message from './page/ui/message'
+import Tabs from './page/ui/tabs'
+import Carousel from './page/ui/carousel'
+import LoginFrom from './page/from/loginFrom'
+import RegisterFrom from './page/from/registerFrom'
+import City from './page/city'
 import BasicForm from './page/table/basicTable'
+import HeighForm from './page/table/hightTable'
+import Order from './page/order'
 
 
 
@@ -43,7 +45,9 @@ class router extends Component {
                                 <Route path='/admin/form/login' component={LoginFrom} />
                                 <Route path='/admin/form/reg' component={RegisterFrom} />
                                 <Route path='/admin/table/basic' component={BasicForm} />
+                                <Route path='/admin/table/high' component={HeighForm} />
                                 <Route path='/admin/city' component={City} />
+                                <Route path='/admin/order' component={Order} />
                                 <Route component={NoMatch} />
                             </Switch>
                         </Admin>
