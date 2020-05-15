@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button, DatePicker, Form, Select, Table } from 'antd'
+import { Card, Button, DatePicker, Form, Select, Table, Modal ,message} from 'antd'
 import myAxios from '../../axios'
 const FormItem = Form.Item
 const Options = Select.Option
@@ -12,7 +12,9 @@ class order extends Component {
     componentWillMount() {
         this.setState({
             ListData: [],
-            current:1
+            current: 1,
+            selectedRowKeys: [],
+            isVisable: false
         })
         this.requestList('ListData', '/order/list')
     }
@@ -33,6 +35,32 @@ class order extends Component {
                 [stateKeyName]: res.item_list
             })
         })
+    }
+    onRowClick = (record, index) => {
+        let selectKey = [index + 1];
+        this.setState({
+            selectedRowKeys: selectKey,
+            selectedItem: record
+        })
+    }
+    handleCancel=()=>{
+        this.setState({
+            isVisable:false
+        })
+    }
+    openModal=()=>{
+        if(this.state.selectedRowKeys.length>0){
+            if(this.state.selectedItem.status==2){
+                message.error('行程已结束')
+            }else{
+                this.setState({
+                    isVisable:true
+                })
+            }
+            
+        }else{
+            message.warning('请选择一条数据')
+        }
     }
     render() {
         const columns = [
@@ -91,9 +119,7 @@ class order extends Component {
                 dataIndex: 'user_pay'
             }
         ]
-        const rowSelection={
-            type:'radio'
-        }
+        const selectedRowKeys = this.state.selectedRowKeys;
         return (
             <div style={{ width: '100%', minWidth: '970px' }}>
                 <Card>
@@ -131,28 +157,41 @@ class order extends Component {
                     </Form>
                 </Card>
                 <Card>
-                    <div style={{marginBottom:15}}>
+                    <div style={{ marginBottom: 15 }}>
                         <Button type='primary'>订单详情</Button>
-                        <Button type='primary'>结束订单</Button>
+                        <Button type='primary' onClick={this.openModal}>结束订单</Button>
                     </div>
-                    <Table 
-                    columns={columns} 
-                    dataSource={this.state.ListData} 
-                    scroll={{ x: 900 }} 
-                    pagination={{
-                        current: this.state.current,
-                        total: 50,
-                        onChange: (page) => {
-                            this.setState({
-                                current: page
-                            })
-                            this.requestList('ListData', '/order/list')
-                        },
-                        rowSelection:{
-                            type:'radio'
-                        }
-                    }}
+                    <Table
+                        columns={columns}
+                        dataSource={this.state.ListData}
+                        scroll={{ x: 900 }}
+                        pagination={{
+                            current: this.state.current,
+                            total: 50,
+                            onChange: (page) => {
+                                this.setState({
+                                    current: page
+                                })
+                                this.requestList('ListData', '/order/list')
+                            }
+                        }}
+                        rowSelection={{
+                            type: 'radio',
+                            selectedRowKeys: selectedRowKeys
+                        }}
+                        onRow={(record, index) => {
+                            return {
+                                onClick: () => {
+                                    this.onRowClick(record, index)
+                                }
+                            };
+                        }}
+                        onChange={(selectedRowKeys, selectedRows) => {
+                            console.log(selectedRowKeys, selectedRows)
+                        }}
                     />
+
+                    <Modal title='结束订单' visible={this.state.isVisable} onCancel={this.handleCancel}></Modal>
                 </Card>
             </div>
         );
