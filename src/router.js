@@ -18,6 +18,8 @@ import City from './page/city'
 import BasicForm from './page/table/basicTable'
 import HeighForm from './page/table/hightTable'
 import Order from './page/order'
+import BikeMap from './page/map'
+import Common from './commom'
 
 
 
@@ -48,11 +50,18 @@ class router extends Component {
                                 <Route path='/admin/table/high' component={HeighForm} />
                                 <Route path='/admin/city' component={City} />
                                 <Route path='/admin/order' component={Order} />
+                                <Route path='/admin/bikeMap' component={BikeMap} />
                                 <Route component={NoMatch} />
                             </Switch>
                         </Admin>
                     }></Route>
-                    <Route path='/order/detial' component={Admin} />
+                    <Route path='/commom' render={() =>
+                        <Common>
+                            <Switch>
+                                <Route path='/commom/order/detial/:orderId' component={Login} />
+                            </Switch>
+                        </Common>
+                    }></Route>
                 </App>
             </Router>
         );

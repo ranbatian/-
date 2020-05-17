@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button, DatePicker, Form, Select, Table, Modal ,message} from 'antd'
+import { Card, Button, DatePicker, Form, Select, Table, Modal, message } from 'antd'
 import myAxios from '../../axios'
 const FormItem = Form.Item
 const Options = Select.Option
@@ -14,9 +14,25 @@ class order extends Component {
             ListData: [],
             current: 1,
             selectedRowKeys: [],
-            isVisable: false
+            isVisable: false,
+            selectedItem:{},
+            detialIsVisable:false
         })
         this.requestList('ListData', '/order/list')
+    }
+    detialCancel=()=>{
+        this.setState({
+            detialIsVisable:false
+        })
+    }
+    openDrtial=()=>{ 
+        if (this.state.selectedRowKeys.length > 0) {
+            this.setState({
+                detialIsVisable:true
+            })
+        } else {
+            message.warning('请选择一条数据')
+        }
     }
     onFinish = value => {
         console.log(value)
@@ -43,24 +59,30 @@ class order extends Component {
             selectedItem: record
         })
     }
-    handleCancel=()=>{
+    handleCancel = () => {
         this.setState({
-            isVisable:false
+            isVisable: false
         })
     }
-    openModal=()=>{
-        if(this.state.selectedRowKeys.length>0){
-            if(this.state.selectedItem.status==2){
+    openModal = () => {
+        if (this.state.selectedRowKeys.length > 0) {
+            if (this.state.selectedItem.status == 2) {
                 message.error('行程已结束')
-            }else{
+            } else {
                 this.setState({
-                    isVisable:true
+                    isVisable: true
                 })
             }
-            
-        }else{
+
+        } else {
             message.warning('请选择一条数据')
         }
+    }
+    successCancel = () => {
+        message.success('成功结束行程')
+        this.setState({
+            isVisable: false
+        })
     }
     render() {
         const columns = [
@@ -120,6 +142,10 @@ class order extends Component {
             }
         ]
         const selectedRowKeys = this.state.selectedRowKeys;
+        const formItemLayout = {
+            labelCol: { span: 5 },
+            wrapperCol: { span: 19 }
+        }
         return (
             <div style={{ width: '100%', minWidth: '970px' }}>
                 <Card>
@@ -158,7 +184,7 @@ class order extends Component {
                 </Card>
                 <Card>
                     <div style={{ marginBottom: 15 }}>
-                        <Button type='primary'>订单详情</Button>
+                        <Button type='primary' onClick={this.openDrtial}>订单详情</Button>
                         <Button type='primary' onClick={this.openModal}>结束订单</Button>
                     </div>
                     <Table
@@ -186,12 +212,47 @@ class order extends Component {
                                 }
                             };
                         }}
-                        onChange={(selectedRowKeys, selectedRows) => {
-                            console.log(selectedRowKeys, selectedRows)
-                        }}
                     />
 
-                    <Modal title='结束订单' visible={this.state.isVisable} onCancel={this.handleCancel}></Modal>
+                    <Modal title='结束订单'
+                        visible={this.state.isVisable}
+                        onCancel={this.handleCancel}
+                        onOk={this.successCancel}>
+                        <Form layout='horizontal'>
+                            <FormItem label='车辆编号' {...formItemLayout}>
+                                {this.state.selectedItem.bike_sn}
+                            </FormItem>
+                            <FormItem label='剩余电量' {...formItemLayout}>
+                            {this.state.selectedItem.bettery+'%'}
+                            </FormItem>
+                            <FormItem label='用户名' {...formItemLayout}>
+                                {this.state.selectedItem.user_name}
+                            </FormItem>
+                            <FormItem label='当前位置' {...formItemLayout}>
+                            {this.state.selectedItem.location}
+                            </FormItem>
+                        </Form>
+                    </Modal>
+                    <Modal title='订单详情' 
+                    visible={this.state.detialIsVisable}
+                    onCancel={this.detialCancel}
+                    onOk={this.detialCancel}
+                    >
+                    <Form layout='horizontal'>
+                            <FormItem label='车辆编号' {...formItemLayout}>
+                                {this.state.selectedItem.bike_sn}
+                            </FormItem>
+                            <FormItem label='剩余电量' {...formItemLayout}>
+                            {this.state.selectedItem.bettery+'%'}
+                            </FormItem>
+                            <FormItem label='用户名' {...formItemLayout}>
+                                {this.state.selectedItem.user_name}
+                            </FormItem>
+                            <FormItem label='当前位置' {...formItemLayout}>
+                            {this.state.selectedItem.location}
+                            </FormItem>
+                        </Form>
+                    </Modal>
                 </Card>
             </div>
         );

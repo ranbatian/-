@@ -1,0 +1,22 @@
+.header {
+  height: 60px;
+  background-color: #1785ff;
+  width: 100%;
+}
+.header .header-title {
+  color: white;
+  line-height: 60px;
+  font-size: 22px;
+  padding-left: 20px;
+}
+.header .choice {
+  color: white;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+.header .choice a {
+  text-decoration: none;
+  color: white;
+}
