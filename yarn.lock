@@ -2453,6 +2453,13 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
+babel-plugin-external-helpers@^6.22.0:
+  version "6.22.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-external-helpers/-/babel-plugin-external-helpers-6.22.0.tgz#2285f48b02bd5dede85175caf8c62e86adccefa1"
+  integrity sha1-IoX0iwK9Xe3oUXXK+MYuhq3M76E=
+  dependencies:
+    babel-runtime "^6.22.0"
+
 babel-plugin-import@^1.13.0:
   version "1.13.0"
   resolved "https://registry.npm.taobao.org/babel-plugin-import/download/babel-plugin-import-1.13.0.tgz#c532fd533df9db53b47d4d4db3676090fc5c07a5"
@@ -2539,7 +2546,7 @@ babel-preset-react-app@^9.1.2:
     babel-plugin-macros "2.8.0"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
 
-babel-runtime@6.x, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -6692,6 +6699,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
+kits-js@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/kits-js/-/kits-js-0.0.7.tgz#4ffb15729ecf4e69994e2591f3ec344496fc470c"
+  integrity sha512-hNzu3t0hJQQcwhuGqvSEIuydwO46SXXr2Agtf+TRBhMq1dorFG5zpT5jDY0oIpFFh3Yd3bsxZmd2QbSrVHbRvg==
+
 kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
@@ -6973,6 +6985,18 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+mapv@^2.0.56:
+  version "2.0.56"
+  resolved "https://registry.yarnpkg.com/mapv/-/mapv-2.0.56.tgz#09133d292ae252d148063752e96b7ccde51810fd"
+  integrity sha512-+wqaoggR9Bc5WPFpZXJ+yOSX9P9/IEH+cZeIVyfWZ7v8ktAhdt1Bl67PfUGGg7R4Wzu51ptlm9qt5L6kS/Y90w==
+  dependencies:
+    babel-plugin-external-helpers "^6.22.0"
+
+mapvgl@^1.0.0-beta.47:
+  version "1.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/mapvgl/-/mapvgl-1.0.0-beta.55.tgz#b097bf62c988cb370e55761dfd29b7158b11328e"
+  integrity sha512-M5gso3wntueOgrgjilq7GkWUd5XNBvRvOJm/fX1V5gKw4UMFqKwEt5yioRQmaBHsQlqYJI8VMD4VfDzTjie5TA==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -9328,6 +9352,15 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+react-bmap@^1.0.117:
+  version "1.0.117"
+  resolved "https://registry.yarnpkg.com/react-bmap/-/react-bmap-1.0.117.tgz#57845155c2e5f772abc57b4f8674c15682b699da"
+  integrity sha512-xf+rEDiZz7Zt7WyoNwCx33MiLMxuaS712qX5Y9zmM2mg4Qe56DG+cu3D3VmimH2BQ5lH2liGP73RNorcRX5urg==
+  dependencies:
+    kits-js "^0.0.7"
+    mapv "^2.0.56"
+    mapvgl "^1.0.0-beta.47"
+
 react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-10.2.1.tgz?cache=0&sync_timestamp=1584750310214&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dev-utils%2Fdownload%2Freact-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -11342,9 +11375,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
-  integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3, whatwg-encoding@^1.0.5:
   version "1.0.5"
