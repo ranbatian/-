@@ -2453,6 +2453,13 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
+babel-plugin-external-helpers@^6.22.0:
+  version "6.22.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-external-helpers/-/babel-plugin-external-helpers-6.22.0.tgz#2285f48b02bd5dede85175caf8c62e86adccefa1"
+  integrity sha1-IoX0iwK9Xe3oUXXK+MYuhq3M76E=
+  dependencies:
+    babel-runtime "^6.22.0"
+
 babel-plugin-import@^1.13.0:
   version "1.13.0"
   resolved "https://registry.npm.taobao.org/babel-plugin-import/download/babel-plugin-import-1.13.0.tgz#c532fd533df9db53b47d4d4db3676090fc5c07a5"
@@ -2539,7 +2546,7 @@ babel-preset-react-app@^9.1.2:
     babel-plugin-macros "2.8.0"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
 
-babel-runtime@6.x, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -5312,9 +5319,9 @@ hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0, hoist-non-react-
     react-is "^16.7.0"
 
 hosted-git-info@^2.1.4:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
-  integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 hpack.js@^2.1.6:
   version "2.1.6"
@@ -6692,6 +6699,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
+kits-js@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/kits-js/-/kits-js-0.0.7.tgz#4ffb15729ecf4e69994e2591f3ec344496fc470c"
+  integrity sha512-hNzu3t0hJQQcwhuGqvSEIuydwO46SXXr2Agtf+TRBhMq1dorFG5zpT5jDY0oIpFFh3Yd3bsxZmd2QbSrVHbRvg==
+
 kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
@@ -6973,6 +6985,18 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+mapv@^2.0.56:
+  version "2.0.62"
+  resolved "https://registry.yarnpkg.com/mapv/-/mapv-2.0.62.tgz#02489df3814b278839e0d73431ef807e647ca693"
+  integrity sha512-P/diaWXuH+vJHVON//RBA7nCEdJAdafwN3Hys/TVYB6e3n7emqlQm+r9qy2xYV0GuxflRhbEeMPJWVIK5HEEqw==
+  dependencies:
+    babel-plugin-external-helpers "^6.22.0"
+
+mapvgl@^1.0.0-beta.117:
+  version "1.0.0-beta.124"
+  resolved "https://registry.yarnpkg.com/mapvgl/-/mapvgl-1.0.0-beta.124.tgz#d3521724905d5feb96d1a5338ed90463f97fb974"
+  integrity sha512-kZYz0elqBui9gSbqrEpWzRm/W8KswShGgsiPhsdSylrgKBZ5e68MKviVsZJxKMBfvPfwvT5xPXqonppXvhJeWA==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -9327,6 +9351,15 @@ react-app-polyfill@^1.0.6:
     raf "^3.4.1"
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
+
+react-bmap@^1.0.117:
+  version "1.0.128"
+  resolved "https://registry.yarnpkg.com/react-bmap/-/react-bmap-1.0.128.tgz#f7260f3be50759ffdffa8b93bb55a7700b4705db"
+  integrity sha512-98Kaa2bpE5ciJK/mCpYUSk3bm5R0WHedzgA/3vRTTW33DBLw9Dbkd6VFI0KSz7xBGo/ruDlLzXkfDSZCIP6bEQ==
+  dependencies:
+    kits-js "^0.0.7"
+    mapv "^2.0.56"
+    mapvgl "^1.0.0-beta.117"
 
 react-dev-utils@^10.2.1:
   version "10.2.1"
