@@ -2453,6 +2453,13 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
+babel-plugin-external-helpers@^6.22.0:
+  version "6.22.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-external-helpers/-/babel-plugin-external-helpers-6.22.0.tgz#2285f48b02bd5dede85175caf8c62e86adccefa1"
+  integrity sha512-TdAMiM6MzLokhk3yCA0KCctmivVZ/mmCwbp7YPmRGkqh2KkcNuxE3R0jxuYU+4xmvfMZx4p4uo8d1cT9t5BLxA==
+  dependencies:
+    babel-runtime "^6.22.0"
+
 babel-plugin-import@^1.13.0:
   version "1.13.0"
   resolved "https://registry.npm.taobao.org/babel-plugin-import/download/babel-plugin-import-1.13.0.tgz#c532fd533df9db53b47d4d4db3676090fc5c07a5"
@@ -2539,7 +2546,7 @@ babel-preset-react-app@^9.1.2:
     babel-plugin-macros "2.8.0"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
 
-babel-runtime@6.x, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -4500,9 +4507,9 @@ events@^3.0.0:
   integrity sha512-Rv+u8MLHNOdMjTAFeT3nCjHn2aGlx435FP/sDHNaRhDEMwyI/aB22Kj2qIN8R0cw3z28psEQLYwxVKLsKrMgWg==
 
 eventsource@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.0.7.tgz#8fbc72c93fcd34088090bc0a4e64f4b5cee6d8d0"
-  integrity sha512-4Ln17+vVT0k8aWq+t/bF5arcS3EpT9gYtW66EPacdj/mAFevznsnyoHLPy2BA8gbIQeIHoPsvwmfBftfcG//BQ==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.1.1.tgz#4544a35a57d7120fba4fa4c86cb4023b2c09df2f"
+  integrity sha512-qV5ZC0h7jYIAOhArFJgSfdyz6rALJyb270714o7ZtNnw2WSJ+eexhKtE0O8LYPRsHZHf2osHKZBxGPvm3kPkCA==
   dependencies:
     original "^1.0.0"
 
@@ -6692,6 +6699,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
+kits-js@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/kits-js/-/kits-js-0.0.7.tgz#4ffb15729ecf4e69994e2591f3ec344496fc470c"
+  integrity sha512-hNzu3t0hJQQcwhuGqvSEIuydwO46SXXr2Agtf+TRBhMq1dorFG5zpT5jDY0oIpFFh3Yd3bsxZmd2QbSrVHbRvg==
+
 kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
@@ -6973,6 +6985,18 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+mapv@^2.0.56:
+  version "2.0.62"
+  resolved "https://registry.yarnpkg.com/mapv/-/mapv-2.0.62.tgz#02489df3814b278839e0d73431ef807e647ca693"
+  integrity sha512-P/diaWXuH+vJHVON//RBA7nCEdJAdafwN3Hys/TVYB6e3n7emqlQm+r9qy2xYV0GuxflRhbEeMPJWVIK5HEEqw==
+  dependencies:
+    babel-plugin-external-helpers "^6.22.0"
+
+mapvgl@^1.0.0-beta.117:
+  version "1.0.0-beta.148"
+  resolved "https://registry.yarnpkg.com/mapvgl/-/mapvgl-1.0.0-beta.148.tgz#cc5a7cdedf3ac5bfbde0dc6e01e2c3c2d8b46717"
+  integrity sha512-fW5QILpF3xDmDgTrGwLVs6pZmzEE0CgeCAu8Uf64ttn/I2lJytH1K25AmDa1QOu7jqJ4kTLryfbtTnnbZVTOig==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -8948,9 +8972,9 @@ querystring@0.2.0:
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
 querystringify@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
-  integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 raf@^3.4.0, raf@^3.4.1:
   version "3.4.1"
@@ -9327,6 +9351,15 @@ react-app-polyfill@^1.0.6:
     raf "^3.4.1"
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
+
+react-bmap@^1.0.117:
+  version "1.0.130"
+  resolved "https://registry.yarnpkg.com/react-bmap/-/react-bmap-1.0.130.tgz#a0abcd345154c3f701bf1613a6a5e95f5207ca45"
+  integrity sha512-0dcJ7T9QDWlGiNV9vd8DMffslFC57zQn/HhrqyITuVwrZl1lYebS0E/uteZ3mNu2bDTZ6bMRn3zYQ6H39jKzhg==
+  dependencies:
+    kits-js "^0.0.7"
+    mapv "^2.0.56"
+    mapvgl "^1.0.0-beta.117"
 
 react-dev-utils@^10.2.1:
   version "10.2.1"
@@ -11057,9 +11090,9 @@ url-loader@2.3.0:
     schema-utils "^2.5.0"
 
 url-parse@^1.4.3:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
